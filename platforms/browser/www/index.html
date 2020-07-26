@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Teste</title>
+    <link rel="stylesheet" href="icons/material.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+</head>
+<body>
+    <div class="topo-fixo z-depth-1">
+        <div class="yellow darken-4 white-text valign-wrapper">
+            <h5 class="titulo">Agenda SQlite</h5>
+        </div>
+    </div>
+    <input type="hidden" id="agenda_id_delete">
+    <input type="hidden" id="agenda_id_update">
+    <div class="section" id="cadastro">
+            <h6 class="container red-text">Cadastro de Pessoa</h6><br><br>
+            <form id="form-dolar">
+                    <label for="nome">Nome:</label>
+                    <input id="cadnome" name="nome" type="text"><br>
+                    <label for="real">Email:</label>
+                    <input id="cademail" name="email" type="text"><br>
+                    <button id="cadastrar" class="waves-effect waves-light btn-large" onclick="add()">Cadastrar</button><br><br>
+            </form>
+    </div>
+    <div class="resultado">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="agenda-listagem">
+                </tbody>
+            </table>
+    </div>
+    <div class="section" id="tela_edicao" hidden>
+    	<div class="row">
+    		<div class="col-md-12">
+    			<input type="button" class="btn btn-lg btn-primary form-control" value="Voltar" onclick="agenda_update_fechar_tela()">
+    			<br>
+    			<h3>Editando contato</h3>
+    			<br>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-12">
+    			<h4>Nome</h4>
+    			<input type="text" class="form-control" id="agenda_nome_update">
+    			<br>
+    			<h4>Email</h4>
+    			<input type="text" class="form-control" id="agenda_email_update">
+    			<br>
+    			<br>
+    			<input type="button" class="btn btn-lg btn-primary form-control" value="Salvar edição" onclick="agenda_update()">
+    			<br>
+    			<br>
+    		</div>
+    	</div>
+    </div>
+    <div> <button id="consulta" class="waves-effect waves-light btn-large" onclick="agenda_consulta()">Consulta</button><br><br></div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/agenda.js"></script>
+</body>
+</html>
+

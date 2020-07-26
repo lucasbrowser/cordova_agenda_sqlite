@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Teste</title>
+    <link rel="stylesheet" href="icons/material.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+</head>
+<body>
+    <div class="topo-fixo z-depth-1">
+        <div class="yellow darken-4 white-text valign-wrapper">
+            <h5 class="titulo">Agenda SQlite</h5>
+        </div>
+    </div>
+    <input type="hidden" id="agenda_id_update">
+    <input type="hidden" id="agenda_id_delete">
+    <div class="section" id="cadastro">
+            <h6 class="container red-text">Cadastro de Pessoa</h6><br><br>
+            <form id="form-dolar">
+                    <label for="nome">Nome:</label>
+                    <input id="cadnome" name="nome" type="text"><br>
+                    <label for="real">Email:</label>
+                    <input id="cademail" name="email" type="text"><br>
+                    <button id="cadastrar" class="waves-effect waves-light btn-large" onclick="add()">Cadastrar</button><br><br>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                    </tr>
+                </thead>
+                <tbody id="agenda-listagem">
+                </tbody>
+            </table>
+    </div>
+    <div class="section" id="edicao">
+        <input type="hidden" id="agenda_id_update1">
+        <input type="button" class="btn btn-lg btn-primary form-control" value="Voltar" onclick="agenda_update_fechar_tela2()"><br><br>
+        <h4 class="container red-text">Editar Pessoa</h4><br><br>
+        <form id="editar-pessoa">
+                <label for="nome">Nome:</label>
+                <input id="editnome" name="enome" type="text"><br>
+                <label for="real">Email:</label>
+                <input id="editemail" name="eemail" type="text"><br>
+                <button id="editar" class="waves-effect waves-light btn-large" onclick="agenda_update2()">Alterar</button>
+                <input type="button" class="waves-effect waves-light btn-large" value="Ver ID" onclick="agenda_ver_id()">
+                <br><br>
+        </form>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/agenda.js"></script>
+</body>
+</html>
+
